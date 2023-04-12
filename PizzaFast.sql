@@ -85,9 +85,16 @@ INSERT INTO `catalog` (`pizzaid`, `name`, `price`, `ingredients`, `picture`) VAL
 CREATE TABLE `coordinates` (
   `id` int NOT NULL,
   `latitude` double NOT NULL,
-  `longtitude` double NOT NULL
+  `longitude` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+
+--
+-- Дамп данных таблицы `coordinates`
+--
+
+INSERT INTO `catalog` (`pizzaid`, `name`, `price`, `ingredients`, `picture`) VALUES
+(1, 'Пепперони', 490, 'салями пепперони, моцарелла, томаты, томатный соус', 'pepperoni.jpg');
 -- --------------------------------------------------------
 
 --
