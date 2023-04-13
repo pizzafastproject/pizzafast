@@ -20,8 +20,16 @@ require_once 'coordinatesToBrowser.php';
     <script>
         var myMap = L.map('mapid',{center:[ 59.9386, 30.3141 ], zoom: 12});
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(myMap);
-        var to = L.marker([59.9386, 30.3141]).addTo(myMap);
-        var courier = L.marker([60, 33]).addTo(myMap);
+        var toIcon = L.icon({
+            iconUrl: '/images/to.png',
+            iconSize:     [38, 38], // size of the icon
+        });
+        var courierIcon = L.icon({
+            iconUrl: '/images/courier.png',
+            iconSize:     [38, 38], // size of the icon
+        });
+        var to = L.marker([59.9386, 30.3141],{icon: toIcon}).addTo(myMap);
+        var courier = L.marker([60, 30.29],{icon: courierIcon}).addTo(myMap);
     </script>
 </body> 
 </html>
